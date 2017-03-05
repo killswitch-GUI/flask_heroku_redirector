@@ -1,0 +1,14 @@
+{
+  "name": "Flask Heroku C2",
+  "description": "Heroku C2 Redirector",
+  "keywords": [
+    "flask",
+    "python",
+    "sample",
+    "C2"
+  ],
+  "repository": "https://github.com/killswitch-GUI/PaaS-C2-Redirectors/tree/master/flask_heroku",
+  "addons": [
+    "heroku-postgresql"
+  ]
+}
