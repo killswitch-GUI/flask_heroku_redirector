@@ -7,8 +7,5 @@
     "sample",
     "C2"
   ],
-  "repository": "https://github.com/killswitch-GUI/flask_heroku_redirector",
-  "addons": [
-    "heroku-postgresql"
-  ]
+  "repository": "https://github.com/killswitch-GUI/flask_heroku_redirector"
 }
