@@ -4,8 +4,7 @@
   "keywords": [
     "flask",
     "python",
-    "sample",
-    "C2"
+    "sample"
   ],
   "repository": "https://github.com/killswitch-GUI/flask_heroku_redirector"
 }
