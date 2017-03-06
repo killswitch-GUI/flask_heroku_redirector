@@ -19,6 +19,6 @@ A simple Python Flask example application that's ready to run on Heroku.
 
 * `heroku create`
 
-* `heroku addons:create heroku-postgresql:hobby-dev`
-
 * `git push heroku master`
+
+
