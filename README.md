@@ -34,4 +34,8 @@ set forward C2 domain (Where to redirect to):
 set redirector domain (Incoming domain name):
 * `heroku config:set CURRENT_DOMAIN=tranquil-dawn-50102.herokuapp.com`
 
+## Monitor 
+monitor the dyno:
+* `heroku logs -t`
+
 
