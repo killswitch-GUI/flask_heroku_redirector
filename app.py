@@ -8,7 +8,7 @@ import json
 # STATIC VAR
 __DEBUG = bool(os.environ.get('DEBUG', True))
 __FORWARD_DOMAIN = str(os.environ.get('FORWARD_DOMAIN', 'cybersyndicates.com'))
-__CURRENT_DOMAIN = str(os.environ.get('CURRENT_DOMAIN', 'tranquil-dawn-50102.herokuapp.com'))
+__CURRENT_DOMAIN = str(os.environ.get('CURRENT_DOMAIN', 'test-1234555555.herokuapp.com'))
 
 ###############################
 #         CUSTOM DEBUG        #
